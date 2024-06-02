@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deleted Tasks</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <nav>
+          <a id="preleaf" href="https://www.prepleaf.com/" target="_blank"
+          >Preleaf By MASAI</a
+        >
+        <a href="index.html">Home</a>
+        <a href="deletedTask.html">Deleted Tasks</a>
+      </nav>
+    </div>
+<div>
+
+  <div class="deleted-task-container">
+
+    <h2>Deleted Tasks</h2>
+    <div class="filter-tasks">
+      <select id="filterPriority" onchange="filterTasks()">
+        <option value="">Filter by Priority</option>
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+      <select id="filterStatus" onchange="filterTasks()">
+        <option value="">Filter by Status</option>
+        <option value="pending">Pending</option>
+        <option value="in-progress">In-progress</option>
+        <option value="complete">Complete</option>
+      </select>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Priority</th>
+          <th>Status</th>
+          <th>Restore</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody id="deletedTaskTable"></tbody>
+    </table>
+  </div>
+
+    <script src="scripts/deletedTask.js"></script>
+  </body>
+</html>

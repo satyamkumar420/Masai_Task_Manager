@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <nav>
+        <a id="preleaf" href="https://www.prepleaf.com/" target="_blank"
+          >@Preleaf By MASAI</a
+        >
+        <a href="index.html">Home</a>
+        <a href="deletedTask.html">Deleted Tasks</a>
+      </nav>
+    </div>
+    <h1>Task Manager</h1>
+    <div class="container">
+      <div class="add-task">
+        <div>
+          <input type="text" id="taskTitle" placeholder="Enter task title" />
+        </div>
+        <select id="taskPriority">
+          <option value="">Select priority</option>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+        <button onclick="addTask()">Add Task</button>
+      </div>
+      <div class="task-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Priority</th>
+              <th>Status</th>
+              <th>Remove</th>
+            </tr>
+          </thead>
+          <tbody id="taskTable"></tbody>
+        </table>
+      </div>
+    </div>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>
