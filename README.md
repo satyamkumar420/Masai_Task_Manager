@@ -5,7 +5,7 @@
 ```plaintext
 ├── deletedTask.html
 ├── index.html
-|---- styles.css
+├── styles.css
 ├── scripts
 |  ├── index.js
 |  └── deletedTask.js
