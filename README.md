@@ -58,7 +58,8 @@ The Task Manager Application allows users to:
 
 ### Landing Page (index.html)
 
-![image](https://github.com/satyamkumar420/Masai_Task_Manager/assets/98641231/cdf71bb6-fb71-4a7d-9e68-018dfe8464d4)
+![image](https://github.com/satyamkumar420/Masai_Task_Manager/assets/98641231/1f4d085e-8d7a-4139-8cc9-fb5164febc6c)
+
 
 
 ### Deleted Tasks Page (deletedTask.html)
