@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
   loadTasks();
+  addPredefineData();
 });
+
+// TODO: Add 10 predefine data in local storage
 
 function loadTasks() {
   const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
@@ -100,4 +103,26 @@ function removeTask(index) {
   localStorage.setItem("tasks", JSON.stringify(tasks));
   localStorage.setItem("deletedTasks", JSON.stringify(deletedTasks));
   loadTasks();
+}
+
+function addPredefineData() {
+  if (!localStorage.getItem("predefineDataLoaded")) {
+    const predefineData = [
+      { title: "HTML", priority: "low", status: "pending" },
+      { title: "CSS", priority: "medium", status: "in-progress" },
+      { title: "JS", priority: "high", status: "complete" },
+      { title: "REACT", priority: "low", status: "pending" },
+      { title: "Python", priority: "medium", status: "in-progress" },
+      { title: "Django", priority: "high", status: "complete" },
+      { title: "SQL", priority: "low", status: "pending" },
+      { title: "DSA", priority: "medium", status: "in-progress" },
+      { title: "MERN", priority: "high", status: "complete" },
+      { title: "JAVA", priority: "low", status: "pending" },
+    ];
+
+    const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+    tasks.push(...predefineData);
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+    localStorage.setItem("predefineDataLoaded", "true");
+  }
 }
